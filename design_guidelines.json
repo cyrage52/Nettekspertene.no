@@ -1,0 +1,120 @@
+{
+  "theme_and_archetype": {
+    "domain": "Web Development Agency",
+    "theme": "Dark",
+    "archetype": "Archetype 4 (Swiss & High-Contrast) / High-End Studio",
+    "vibe": "Professional, sleek, Scandinavian minimalism. 'Dark but not too dark'."
+  },
+  "colors": {
+    "background": "#1A1A1A",
+    "surface": "#242424",
+    "surface_glass": "rgba(36, 36, 36, 0.7)",
+    "text_primary": "#F5F5F5",
+    "text_secondary": "#A3A3A3",
+    "border": "#333333",
+    "primary_accent": "#FFFFFF",
+    "hover_state": "#3A3A3A"
+  },
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "Manrope",
+    "heading_scale": {
+      "h1": "text-5xl sm:text-6xl tracking-tighter font-light",
+      "h2": "text-3xl sm:text-4xl tracking-tight font-light",
+      "h3": "text-xl sm:text-2xl font-medium",
+      "h4": "text-lg font-medium"
+    },
+    "body_scale": "text-base sm:text-lg leading-relaxed text-secondary",
+    "rules": "Never use Inter for headings. Keep headings font-light or font-normal to maintain the sleek Scandinavian look. Use uppercase + wide tracking for subheadings/labels."
+  },
+  "spacing_and_layout": {
+    "container_padding": "p-8 md:p-16 lg:p-24",
+    "grid_strategy": "The 'Tetris' Grid (Mode A) for marketing sections, allowing asymmetrical, wide gaps (gap-8 to gap-12).",
+    "border_radius": "rounded-none md:rounded-sm",
+    "header": "Crystal Glassmorphism (backdrop-blur-xl bg-[#1A1A1A]/70) with 1px delicate inner stroke (border-white/10). Z-index 50."
+  },
+  "components_and_sections": {
+    "navigation": {
+      "description": "Sticky header with crystal glassmorphism. Contains Logo, standard links, and a Language Toggle (NO/EN) pill.",
+      "language_toggle": "Default to Norwegian (NO). Sleek toggle button."
+    },
+    "hero": {
+      "description": "High visual impact hero. Use the generated abstract background as a subtle underlying texture (bg-cover, max opacity 20%). Large typography, strong value proposition.",
+      "layout": "Asymmetric, text heavy on the left, empty breathing space on the right."
+    },
+    "services": {
+      "items": [
+        "Nettsideutvikling",
+        "Nettbutikk/E-handel",
+        "SEO",
+        "Webdesign/UI-UX"
+      ],
+      "layout": "Grid Borders ('Technical' Look) - border-collapse style layout, items have subtle borders on right and bottom. No Shadcn Cards, use raw HTML/Tailwind."
+    },
+    "portfolio": {
+      "description": "Showcase section for past work.",
+      "interactions": "The 2 provided videos MUST auto-play when they enter the viewport (use IntersectionObserver or framer-motion useInView). Muted, looping.",
+      "layout": "Massive, immersive layout. Videos shouldn't be constrained to tiny boxes. Use negative space."
+    },
+    "about_us": {
+      "description": "Minimalist 'About the studio' section.",
+      "layout": "Image on one side, text on the other. High contrast typography."
+    },
+    "contact": {
+      "description": "Contact form for new clients.",
+      "fields": [
+        "Business name (Bedriftsnavn)",
+        "Contact Number (Telefonnummer)",
+        "Contact email (E-post)",
+        "What they are looking for (Hva ser du etter) - textarea",
+        "Budget (Budsjett) - dropdown"
+      ],
+      "budget_options": [
+        "5000 NOK",
+        "7500 NOK",
+        "10000 NOK",
+        "15000 NOK eller høyere"
+      ],
+      "components": "Shadcn Form, Input, Textarea, Select.",
+      "integration": "Resend for email delivery."
+    },
+    "footer": {
+      "description": "Professional sleek footer.",
+      "content": "Must include Org. number: 937 733 615. Large typography for 'Nettekspertene'."
+    }
+  },
+  "image_urls": {
+    "hero_background": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/4910953a-b040-44aa-b1e5-6f56f5e7d101/images/f3e9f2c9eae666c23004ec68e0c92a3ce69aa87fd13014f47c18120ede1a7a3b.png",
+      "description": "Abstract 3D dark slate geometric texture, perfect for the hero background with low opacity."
+    },
+    "about_us_image": {
+      "url": "https://images.pexels.com/photos/17332725/pexels-photo-17332725.jpeg",
+      "description": "Minimalist desk setup with natural elements, used to represent the studio in the About Us section."
+    },
+    "portfolio_video_1": {
+      "url": "https://customer-assets.emergentagent.com/job_4910953a-b040-44aa-b1e5-6f56f5e7d101/artifacts/wgxr6by2_FirstOne.mp4",
+      "description": "First portfolio video."
+    },
+    "portfolio_video_2": {
+      "url": "https://customer-assets.emergentagent.com/job_4910953a-b040-44aa-b1e5-6f56f5e7d101/artifacts/kwuhokj2_Secound%20one.mp4",
+      "description": "Second portfolio video."
+    }
+  },
+  "motion_and_interactions": {
+    "scroll": "Use Lenis for smooth scrolling. Momentum and weight make the site feel premium.",
+    "hover": "Explicitly set text color on hover. Use a slightly lighter surface color (e.g., hover:bg-[#3A3A3A]).",
+    "videos": "Crucial: Scroll-triggered video playback. The videos must be paused by default and play only when visible to save resources and create a 'living' feel."
+  },
+  "testing": {
+    "rules": "All interactive and key informational elements MUST include a data-testid attribute in kebab-case, role-based."
+  },
+  "instructions_to_main_agent": {
+    "setup": "Use React + Tailwind + Vite. Install framer-motion, lucide-react, lenis, @radix-ui/react-icons.",
+    "language": "Implement a simple React context or state for i18n (Norwegian and English). Default NO.",
+    "email": "Implement Resend logic for the contact form.",
+    "styling": "Enforce the dark theme strictly by making the body bg-[#1A1A1A] and text-[#F5F5F5]. Avoid pure black.",
+    "typography": "Include 'Outfit' and 'Manrope' via Google Fonts.",
+    "shadcn": "Customize shadcn components (Input, Select, Form, Textarea) to match the high-end dark theme (no heavy borders, use background colors with subtle outlines)."
+  }
+}
