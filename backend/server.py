@@ -20,7 +20,7 @@ load_dotenv(ROOT_DIR / '.env')
 mongo_url = os.getenv("MONGO_URL")
 client = AsyncIOMotorClient(mongo_url)
 
-db = client[os.getenv("DB_NAME", "test")]
+db = client[os.getenv("DB_NAME", "Netteksperten")]
 
 # Resend configuration
 resend.api_key = os.environ['RESEND_API_KEY']
